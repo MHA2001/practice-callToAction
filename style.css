@@ -84,12 +84,28 @@ a {
 	}
 }
 
+.flow-content > * + * {
+	margin-top: var(--gap, 1rem);
+}
+
 body {
 	font-family: var(--ff-base);
 	font-size: var(--fs-normal);
 	line-height: 1.65;
 	padding: 4em;
 	background-color: var(--clr-primary-200);
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	max-width: 40rem;
+	margin-inline: auto;
+}
+
+.cta {
+	padding: 5rem;
 }
 
 .cta-title {
@@ -102,4 +118,11 @@ body {
 	font-family: var(--ff-accent);
 	text-transform: uppercase;
 	color: inherit;
+
+	display: inline-block;
+	padding: 0.625rem 1.5rem;
+	outline: 1px red solid;
+}
+.btn:not(:first-child) {
+	margin-left: 1rem;
 }
