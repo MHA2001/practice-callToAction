@@ -106,6 +106,10 @@ main {
 
 .cta {
 	padding: 5rem;
+	background-color: white; /* must changed */
+	border-radius: 2.5rem;
+	background-color: var(--bg);
+	color: var(--fg);
 }
 
 .cta-title {
@@ -114,15 +118,105 @@ main {
 	font-size: var(--fs-large);
 }
 
+.bg-light {
+	--bg: var(--clr-neutral-100);
+	--fg: var(--clr-primary-500);
+
+	--clr-btn-primary-fg: var(--clr-neutral-100);
+	--clr-btn-primary-bg: var(--clr-primary-400);
+	--clr-btn-primary-fg-hover: var(--clr-neutral-100);
+	--clr-btn-primary-bg-hover: var(--clr-primary-300);
+
+	--clr-btn-secondary-fg: var(--clr-neutral-100);
+	--clr-btn-secondary-bg: var(--clr-neutral-400);
+	--clr-btn-secondary-fg-hover: var(--clr-neutral-100);
+	--clr-btn-secondary-bg-hover: var(--clr-primary-500);
+
+	--clr-btn-outline-fg: var(--clr-primary-400);
+	--clr-btn-outline-fg-hover: var(--clr-neutral-100);
+	--clr-btn-outline-bg-hover: var(--clr-primary-400);
+}
+
+.bg-dark {
+	--bg: var(--clr-primary-500);
+	--fg: var(--clr-neutral-100);
+
+	--clr-btn-primary-fg: var(--clr-neutral-100);
+	--clr-btn-primary-bg: var(--clr-primary-300);
+	--clr-btn-primary-fg-hover: var(--clr-neutral-100);
+	--clr-btn-primary-bg-hover: var(--clr-primary-400);
+
+	--clr-btn-secondary-fg: var(--clr-primary-300);
+	--clr-btn-secondary-bg: var(--clr-neutral-100);
+	--clr-btn-secondary-fg-hover: var(--clr-neutral-100);
+	--clr-btn-secondary-bg-hover: var(--clr-neutral-400);
+
+	--clr-btn-outline-fg: var(--clr-neutral-100);
+	--clr-btn-outline-fg-hover: var(--clr-primary-500);
+	--clr-btn-outline-bg-hover: var(--clr-neutral-100);
+}
+
+.bg-accent {
+	--bg: var(--clr-primary-400);
+	--fg: var(--clr-neutral-100);
+
+	--clr-btn-primary-fg: var(--clr-primary-400);
+	--clr-btn-primary-bg: var(--clr-neutral-100);
+	--clr-btn-primary-fg-hover: var(--clr-neutral-100);
+	--clr-btn-primary-bg-hover: var(--clr-primary-300);
+
+	--clr-btn-secondary-fg: var(--clr-neutral-100);
+	--clr-btn-secondary-bg: var(--clr-primary-500);
+	--clr-btn-secondary-fg-hover: var(--clr-neutral-100);
+	--clr-btn-secondary-bg-hover: var(--clr-neutral-400);
+
+	--clr-btn-outline-fg: var(--clr-neutral-100);
+	--clr-btn-outline-fg-hover: var(--clr-primary-400);
+	--clr-btn-outline-bg-hover: var(--clr-neutral-100);
+}
+
 .btn {
 	font-family: var(--ff-accent);
 	text-transform: uppercase;
 	color: inherit;
 
 	display: inline-block;
-	padding: 0.625rem 1.5rem;
-	outline: 1px red solid;
+	padding: 0.5rem 1.5rem;
+
+	border-radius: 0.75rem;
 }
+
+.btn-primary {
+	background-color: var(--clr-btn-primary-bg);
+	color: var(--clr-btn-primary-fg);
+}
+
+.btn-primary:hover {
+	background-color: var(--clr-btn-primary-bg-hover);
+	color: var(--clr-btn-primary-fg-hover);
+}
+
+.btn-secondary {
+	background-color: var(--clr-btn-secondary-bg);
+	color: var(--clr-btn-secondary-fg);
+}
+
+.btn-secondary:hover {
+	background-color: var(--clr-btn-secondary-bg-hover);
+	color: var(--clr-btn-secondary-fg-hover);
+}
+
+.btn-outline {
+	color: var(--clr-btn-outline-fg);
+	border: 2px solid var(--clr-btn-outline-fg);
+}
+
+.btn-outline:hover {
+	color: var(--clr-btn-outline-fg-hover);
+	/* border: none; */
+	background-color: var(--clr-btn-outline-bg-hover);
+}
+
 .btn:not(:first-child) {
 	margin-left: 1rem;
 }
