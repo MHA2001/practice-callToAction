@@ -122,57 +122,68 @@ main {
 	--bg: var(--clr-neutral-100);
 	--fg: var(--clr-primary-500);
 
-	--clr-btn-primary-fg: var(--clr-neutral-100);
-	--clr-btn-primary-bg: var(--clr-primary-400);
-	--clr-btn-primary-fg-hover: var(--clr-neutral-100);
-	--clr-btn-primary-bg-hover: var(--clr-primary-300);
+	/* Primary Button */
+	--btn-primary-bg: var(--clr-primary-400);
+	--btn-primary-fg: var(--clr-neutral-100);
+	--btn-primary-bg-hover: var(--clr-primary-300);
+	--btn-primary-fg-hover: var(--clr-neutral-100);
 
-	--clr-btn-secondary-fg: var(--clr-neutral-100);
-	--clr-btn-secondary-bg: var(--clr-neutral-400);
-	--clr-btn-secondary-fg-hover: var(--clr-neutral-100);
-	--clr-btn-secondary-bg-hover: var(--clr-primary-500);
+	/* Secondary Button */
+	--btn-secondary-bg: var(--clr-neutral-400);
+	--btn-secondary-fg: var(--clr-neutral-100);
+	--btn-secondary-bg-hover: var(--clr-primary-500);
+	--btn-secondary-fg-hover: var(--clr-neutral-100);
 
-	--clr-btn-outline-fg: var(--clr-primary-400);
-	--clr-btn-outline-fg-hover: var(--clr-neutral-100);
-	--clr-btn-outline-bg-hover: var(--clr-primary-400);
+	/* Outline Button */
+	--btn-outline-border: var(--clr-primary-400);
+	--btn-outline-fg: var(--clr-primary-400);
+	--btn-outline-bg-hover: var(--clr-primary-400);
+	--btn-outline-fg-hover: var(--clr-neutral-100);
 }
 
 .bg-dark {
 	--bg: var(--clr-primary-500);
 	--fg: var(--clr-neutral-100);
 
-	--clr-btn-primary-fg: var(--clr-neutral-100);
-	--clr-btn-primary-bg: var(--clr-primary-300);
-	--clr-btn-primary-fg-hover: var(--clr-neutral-100);
-	--clr-btn-primary-bg-hover: var(--clr-primary-400);
+	/* Primary Button */
+	--btn-primary-bg: var(--clr-primary-300);
+	--btn-primary-fg: var(--clr-neutral-100);
+	--btn-primary-bg-hover: var(--clr-primary-400);
+	--btn-primary-fg-hover: var(--clr-neutral-100);
 
-	--clr-btn-secondary-fg: var(--clr-primary-300);
-	--clr-btn-secondary-bg: var(--clr-neutral-100);
-	--clr-btn-secondary-fg-hover: var(--clr-neutral-100);
-	--clr-btn-secondary-bg-hover: var(--clr-neutral-400);
+	/* Secondary Button */
+	--btn-secondary-bg: var(--clr-neutral-100);
+	--btn-secondary-fg: var(--clr-primary-300);
+	--btn-secondary-bg-hover: var(--clr-neutral-400);
+	--btn-secondary-fg-hover: var(--clr-neutral-100);
 
-	--clr-btn-outline-fg: var(--clr-neutral-100);
-	--clr-btn-outline-fg-hover: var(--clr-primary-500);
-	--clr-btn-outline-bg-hover: var(--clr-neutral-100);
+	/* Outline Button */
+	--btn-outline-border: var(--clr-neutral-100);
+	--btn-outline-fg: var(--clr-neutral-100);
+	--btn-outline-bg-hover: var(--clr-neutral-100);
+	--btn-outline-fg-hover: var(--clr-primary-500);
 }
 
 .bg-accent {
 	--bg: var(--clr-primary-400);
 	--fg: var(--clr-neutral-100);
 
-	--clr-btn-primary-fg: var(--clr-primary-400);
-	--clr-btn-primary-bg: var(--clr-neutral-100);
-	--clr-btn-primary-fg-hover: var(--clr-neutral-100);
-	--clr-btn-primary-bg-hover: var(--clr-primary-300);
+	--btn-primary-fg: var(--clr-primary-400);
+	--btn-primary-bg: var(--clr-neutral-100);
+	--btn-primary-fg-hover: var(--clr-neutral-100);
+	--btn-primary-bg-hover: var(--clr-primary-300);
 
-	--clr-btn-secondary-fg: var(--clr-neutral-100);
-	--clr-btn-secondary-bg: var(--clr-primary-500);
-	--clr-btn-secondary-fg-hover: var(--clr-neutral-100);
-	--clr-btn-secondary-bg-hover: var(--clr-neutral-400);
+	/* Secondary Button */
+	--btn-secondary-bg: var(--clr-primary-500);
+	--btn-secondary-fg: var(--clr-neutral-100);
+	--btn-secondary-bg-hover: var(--clr-neutral-400);
+	--btn-secondary-fg-hover: var(--clr-neutral-100);
 
-	--clr-btn-outline-fg: var(--clr-neutral-100);
-	--clr-btn-outline-fg-hover: var(--clr-primary-400);
-	--clr-btn-outline-bg-hover: var(--clr-neutral-100);
+	/* Outline Button */
+	--btn-outline-border: var(--clr-neutral-100);
+	--btn-outline-fg: var(--clr-neutral-100);
+	--btn-outline-bg-hover: var(--clr-neutral-100); /* Added for consistency */
+	--btn-outline-fg-hover: var(--clr-primary-400);
 }
 
 .btn {
@@ -184,37 +195,42 @@ main {
 	padding: 0.5rem 1.5rem;
 
 	border-radius: 0.75rem;
+	border: 2px solid transparent; /* Set a transparent border to prevent layout shift on hover for outline button */
+	transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 .btn-primary {
-	background-color: var(--clr-btn-primary-bg);
-	color: var(--clr-btn-primary-fg);
+	background-color: var(--btn-primary-bg);
+	color: var(--btn-primary-fg);
 }
 
 .btn-primary:hover {
-	background-color: var(--clr-btn-primary-bg-hover);
-	color: var(--clr-btn-primary-fg-hover);
+	background-color: var(--btn-primary-bg-hover);
+	color: var(--btn-primary-fg-hover);
 }
 
 .btn-secondary {
-	background-color: var(--clr-btn-secondary-bg);
-	color: var(--clr-btn-secondary-fg);
+	background-color: var(--btn-secondary-bg);
+	color: var(--btn-secondary-fg);
 }
 
 .btn-secondary:hover {
-	background-color: var(--clr-btn-secondary-bg-hover);
-	color: var(--clr-btn-secondary-fg-hover);
+	background-color: var(--btn-secondary-bg-hover);
+	color: var(--btn-secondary-fg-hover);
 }
 
 .btn-outline {
-	color: var(--clr-btn-outline-fg);
-	border: 2px solid var(--clr-btn-outline-fg);
+	color: var(--btn-outline-fg);
+	border-color: var(--btn-outline-fg);
+	background-color: transparent;
 }
 
 .btn-outline:hover {
-	color: var(--clr-btn-outline-fg-hover);
-	/* border: none; */
-	background-color: var(--clr-btn-outline-bg-hover);
+	color: var(--btn-outline-fg-hover);
+	background-color: var(--btn-outline-bg-hover);
+	border-color: var(
+		--btn-outline-bg-hover
+	); /* Match border to background on hover */
 }
 
 .btn:not(:first-child) {
