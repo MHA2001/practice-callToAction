@@ -83,3 +83,23 @@ a {
 		scroll-padding-top: 3rem;
 	}
 }
+
+body {
+	font-family: var(--ff-base);
+	font-size: var(--fs-normal);
+	line-height: 1.65;
+	padding: 4em;
+	background-color: var(--clr-primary-200);
+}
+
+.cta-title {
+	font-family: var(--ff-accent);
+	font-weight: var(--fw-bold);
+	font-size: var(--fs-large);
+}
+
+.btn {
+	font-family: var(--ff-accent);
+	text-transform: uppercase;
+	color: inherit;
+}
