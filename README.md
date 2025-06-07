@@ -1,4 +1,4 @@
-# 🖥️ Project Title: Responsive Grid layout
+# 🖥️ Project Title: Theme Styling
 
 ## 🧠 Project Overview
 
