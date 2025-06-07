@@ -1,0 +1,85 @@
+:root {
+	--clr-neutral-100: #fff;
+	--clr-neutral-400: #474554;
+	--clr-primary-200: #bac9e8;
+	--clr-primary-300: #3c7dff;
+	--clr-primary-400: #0044cc;
+	--clr-primary-500: #0c1832;
+
+	--ff-base: 'IBM Plex Serif', serif;
+	--ff-accent: 'Poppins', sans-serif;
+
+	--fs-normal: 1rem;
+	--fs-large: 1.75rem;
+
+	--fw-normal: 400;
+	--fw-bold: 700;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+	line-height: 1.1;
+}
+body,
+h1,
+h2,
+h3,
+p,
+dl,
+dd,
+figure {
+	margin: 0;
+}
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-style: italic;
+}
+
+picture,
+svg,
+video {
+	max-width: 100%;
+	display: block;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+}
+
+a {
+	font: inherit;
+	text-decoration: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	:has(:target) {
+		scroll-behavior: smooth;
+		scroll-padding-top: 3rem;
+	}
+}
